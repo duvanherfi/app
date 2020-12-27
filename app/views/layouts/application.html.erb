@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= stylesheet_pack_tag 'hello_vue' %>
+    <!-- the lines above imports the hello_vue css file and mounts it here..-->
+    <%= javascript_pack_tag 'hello_vue' %>
+    <!-- the lines above imports the hello_vue js file and mounts it here..-->
+  </head>
+
+  <body>
+    <div id="hello">
+
+      <div class="container is-max-desktop">
+        <menu-component> </menu-component>
+        <section class="section">
+          <div class="container">
+            <%= yield %>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="content has-text-centered">
+            <p>
+              <strong>App</strong> by <a href="https://www.facebook.com/uvanherfi/">Duvan Hernandez</a>. The source code is licensed
+              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
